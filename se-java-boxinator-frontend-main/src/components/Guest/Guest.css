@@ -1,0 +1,22 @@
+#guest-form {
+    border: 1px #000000b5 solid;
+    padding: 1%;
+    margin: 2%;
+    border-radius: 20px; 
+    box-shadow: black;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 2px 2px 11px 3px #0000007d;
+    padding: 2%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.guest-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.home-btn{
+    cursor: pointer;
+}

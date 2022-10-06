@@ -1,0 +1,38 @@
+.Navbar {
+	display: flex;
+	background-color: #efefef;
+}
+.NavbarMenu {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	justify-content: center;
+	background-color: #1F1A38;
+	
+    text-decoration: none;
+
+}
+.NavbarMenuRight {
+	margin-left: auto;
+}
+.NavbarBrand {
+	font-weight: bold;
+}
+.NavbarMenuItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.NavbarMenuItem a {
+	color: white;
+	display: block;
+	text-decoration: none;
+	padding: 1.25em;
+	list-style: none;
+	text-decoration: none !important;
+}
+a.NavbarActive {
+	background-color: rgb(180, 180, 180);
+	text-decoration: none;
+}

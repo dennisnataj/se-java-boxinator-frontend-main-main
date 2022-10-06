@@ -1,0 +1,28 @@
+# This file is a template, and might need editing before it works on your project.
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml
+
+# Full project: https://gitlab.com/pages/plain-html
+pages:
+  image: node:16
+  script:
+    - npm install
+    - unset CI # <-------- this line helped
+    - npm run build
+    - rm -r public
+    - mv build public
+    - cp public/index.html public/404.html
+  variables: 
+      REACT_APP_EMAILJS_USER_ID: $EMAILJS_USER_ID
+      REACT_APP_EMAILJS_TEMPLATE: $EMAILJS_TEMPLATE
+      REACT_APP_EMAILJS_SERVICE: $EMAILJS_SERVICE
+      REACT_APP_BASE_URL: $BASE_URL
+
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
